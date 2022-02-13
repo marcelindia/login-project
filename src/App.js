@@ -10,12 +10,10 @@ function App() {
       <header className="App-header">
         {loginStatus && <h1>Welcome Back!</h1>}
         {!loginStatus && <h1>Please Login.</h1>}
+
         <div>
-          {loginStatus ? (
-            <>
-              <button onClick={() => setLoginStatus(true)}>LOGIN</button>
-              &nbsp;
-            </>
+          {!loginStatus ? (
+            <button onClick={() => setLoginStatus(true)}>LOGIN</button>
           ) : (
             <button onClick={() => setLoginStatus(false)}>LOGOUT</button>
           )}
